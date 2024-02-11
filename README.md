@@ -2,20 +2,23 @@ HackerNews REST API Client
 
 Rest API Client for displaying data from Hacker News API.
 
-PreRequisites
+Prerequisites
 
 Install .NET 8.0 SDK from https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
 Steps to run the Project
 
-Download the code from the Github link
-Open Command Prompt
-run the command dotnet dev-certs https --trust 
-Cd to the folder HackerNewsClient (in the Downloaded Code) 
-run the command dotnet run 
-Now we should see a web page (http://localhost:5025/swagger/index.html) which should open swagger and list all the API's available
+1.	Download the code from the Github link
+2.	Open Command Prompt
+3.	run the command dotnet dev-certs https --trust 
+4.	Cd to the folder HackerNewsClient (in the Downloaded Code) 
+5.	run the command dotnet run 
+6.	Now we should see a web page (http://localhost:5025/swagger/index.html) which should open swagger and list all the API's available
 
 Development challenge Use httpsgithub.comHackerNewsAPI to generate API using C# and .NET that displays the N number of stories of the current best stories on Hacker News.
+
+
+
 
 Requirements
 
@@ -25,8 +28,8 @@ Used In-Memory cache. https://docs.microsoft.comen-usaspnetcoreperformancecachin
 
 Improvements
 
-As a User, I would like the ability to search best stories by title. 
-As a User, I would like the ability to search best stories by author.
-As a User, I would like viewing and searching of best stories to be responsive. I should not have to wait more than a couple seconds for the api to retrieve the data.
+1.	As a User, I would like the ability to search best stories by title. 
+2.	As a User, I would like the ability to search best stories by author.
+3.	As a User, I would like viewing and searching of best stories to be responsive. I should not have to wait more than a couple seconds for the api to retrieve the data.
 
 Investigate better error handling for BestStoryController.GetStoryAsnc. Currently, if there is an issue retrieving story details, creates a story object with an error message in title then saves to cache. Trouble spot would be on subsequent calls. Even if connection was restored, story id is still in cache and would return object with error in title. Possible solution; on error, do not store error story in cache
